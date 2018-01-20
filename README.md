@@ -17,7 +17,7 @@ Prints the next trains for a given station.
 
 You need to 
 ```
-export export API_KEY="xxxxxxxxxxxxx"
+export API_KEY="xxxxxxxxxxxxx"
 ```
 
 You have to get your own API key (for free from) http://datamine.mta.info/user/register
