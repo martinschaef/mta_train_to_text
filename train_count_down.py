@@ -7,7 +7,7 @@ sense = SenseHat()
 sense.rotation = 180
 
 
-TOO_SHORT_TIME=3 # Don't show the time if the train is closer than TOO_SHORT_TIME minutes
+TOO_SHORT_TIME=2 # Don't show the time if the train is closer than TOO_SHORT_TIME minutes
 TOO_LONG_TIME=9 # Don't show the time if the train is further than TOO_LONG_TIME minutes
 
 # The stops that we want to look at.
@@ -87,13 +87,14 @@ while True:
         # Grab the current time so that you can find out the minutes to arrival
         current_time = int(time.time())
 
-	found_train=False
+        found_train=False
         for arrival_time, train_name in arriving_trains:
             time_to_train = int(((arrival_time - current_time) / 60))
             print ("Next {} train in {} min".format(train_name, time_to_train))
 
             if time_to_train<TOO_SHORT_TIME or time_to_train > TOO_LONG_TIME:
                 continue
+
             color = [0, 0, 100]
             if time_to_train < 7:
                 color = [0, 0, 250]
