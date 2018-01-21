@@ -4,7 +4,7 @@ from protobuf_to_dict import protobuf_to_dict
 from sense_hat import SenseHat
 
 sense = SenseHat()
-#sense.rotation = 90
+sense.rotation = 180
 
 
 TOO_SHORT_TIME=3 # Don't show the time if the train is closer than TOO_SHORT_TIME minutes
